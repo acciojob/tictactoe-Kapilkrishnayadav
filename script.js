@@ -30,9 +30,9 @@ const player1Input = document.getElementById("player-1");
           ) {
             win = 1;
             const username = boxes[a].innerText === "x" ? Player1 : Player2;
-            document.getElementById(
+            document.getElementsByClassName(
               "message"
-            ).innerText = `${username}, congratulations you win!`;
+            )[0].innerText = `${username}, congratulations you won!`;
 			  boxes[a].style.backgroundColor="#800080";
 			  boxes[b].style.backgroundColor="#800080";
 			  boxes[c].style.backgroundColor="#800080";
@@ -51,7 +51,7 @@ const player1Input = document.getElementById("player-1");
         if (Player1 !== "" && Player2 !== "") {
           change.innerHTML = `
             <div id="center">
-              <div id="message" style="text-align: center;">${currentPlayer}, you're up</div>
+              <div class="message" style="text-align: center;">${currentPlayer}, you're up</div>
               <div class="grid">
                 ${Array.from({ length: 9 }, (_, i) => `<div class="box" id="${i + 1}"></div>`).join("")}
               </div>
@@ -68,11 +68,11 @@ const player1Input = document.getElementById("player-1");
                 if (win === 0) {
                   currentSymbol = currentSymbol === "x" ? "o" : "x";
                   currentPlayer = currentPlayer === Player1 ? Player2 : Player1;
-                  document.getElementById(
+                  document.getElementsByClassName(
                     "message"
-                  ).innerText = `${currentPlayer}, you're up`;
+                  )[0].innerText = `${currentPlayer}, you're up`;
                   if (count == 9) {
-                      document.getElementById("message").innerText=`Draw Game`
+                      document.getElementsByClassName("message")[0].innerText=`Draw Game`
                   }
                 }
               }
