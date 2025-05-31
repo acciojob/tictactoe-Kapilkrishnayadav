@@ -29,10 +29,10 @@ const player1Input = document.getElementById("player-1");
             boxes[a].innerText === boxes[c].innerText
           ) {
             win = 1;
-            const winner = boxes[a].innerText === "x" ? Player1 : Player2;
+            const username = boxes[a].innerText === "x" ? Player1 : Player2;
             document.getElementById(
               "message"
-            ).innerText = `${winner}, congratulations you win!`;
+            ).innerText = `${username}, congratulations you win!`;
 			  boxes[a].style.backgroundColor="#800080";
 			  boxes[b].style.backgroundColor="#800080";
 			  boxes[c].style.backgroundColor="#800080";
@@ -53,7 +53,7 @@ const player1Input = document.getElementById("player-1");
             <div id="center">
               <div id="message" style="text-align: center;">${currentPlayer}, you're up</div>
               <div class="grid">
-                ${Array(9).fill('<div class="box"></div>').join("")}
+                ${Array.from({ length: 9 }, (_, i) => `<div class="box" id="${i + 1}"></div>`).join("")}
               </div>
              
             </div>
