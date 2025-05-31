@@ -53,9 +53,10 @@
         border: 2px solid black;
         width: 18rem;
       }
-      #message {
+      .message {
         font-family: Arial, sans-serif;
         font-size: 1.3rem;
+		  font-weight:700;
       }
       #center {
         display: flex;
