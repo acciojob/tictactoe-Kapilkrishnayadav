@@ -33,6 +33,9 @@ const player1Input = document.getElementById("player-1");
             document.getElementById(
               "message"
             ).innerText = `${winner}, congratulations you win!`;
+			  boxes[a].style.backgroundColor="#800080";
+			  boxes[b].style.backgroundColor="#800080";
+			  boxes[c].style.backgroundColor="#800080";
           }
         });
       }
@@ -52,9 +55,7 @@ const player1Input = document.getElementById("player-1");
               <div class="grid">
                 ${Array(9).fill('<div class="box"></div>').join("")}
               </div>
-              <div style="text-align:center; margin-top:10px;">
-                <button onclick="location.reload()">Restart</button>
-              </div>
+             
             </div>
           `;
 
