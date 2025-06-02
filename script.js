@@ -32,7 +32,7 @@ const player1Input = document.getElementById("player1");
             const username = boxes[a].innerText === "x" ? Player1 : Player2;
             document.getElementsByClassName(
               "message"
-            )[0].innerText = `${username}, congratulations you won!`;
+            )[0].innerText = `${username} congratulations you won!`;
 			  boxes[a].style.backgroundColor="#800080";
 			  boxes[b].style.backgroundColor="#800080";
 			  boxes[c].style.backgroundColor="#800080";
