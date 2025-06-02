@@ -82,3 +82,5 @@ const player1Input = document.getElementById("player1");
           alert("Enter name of both the players!");
         }
       }
+
+ window.startGame = startGame;
